@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222166228055",
+    "project_id": "fohormaila-cac56",
+    "storage_bucket": "fohormaila-cac56.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222166228055:android:7a46a6f7ea833a57a59712",
+        "android_client_info": {
+          "package_name": "com.example.test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC394M7CsRteAJrqcoplRmJDtwlVd6ochg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
