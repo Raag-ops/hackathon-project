@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:phalaun/authentication/login_screen.dart';
+import 'Authentication/login_screen.dart';
 
 class Splash extends StatelessWidget {
   const Splash({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Get screen size for responsiveness
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
@@ -42,7 +41,19 @@ class Splash extends StatelessWidget {
                 ),
               ),
             ),
-            // Text for App Description
+            // Logo Image
+            Positioned(
+              top: screenHeight * 0.25, // Adjust top position
+              left: screenWidth * 0.25, // Center the image horizontally
+              child: SizedBox(
+                width: screenWidth * 0.5, // Adjust the size of the logo
+                child: Image.asset(
+                  'assets/logo.png',
+                  fit: BoxFit.contain, // Adjust the fit as needed
+                ),
+              ),
+            ),
+            // App Description
             Positioned(
               left: screenWidth * 0.13,
               top: screenHeight * 0.61,
@@ -82,7 +93,7 @@ class Splash extends StatelessWidget {
                 ),
               ),
             ),
-            // Get Started Button
+            // Get Started Button (Login)
             Positioned(
               left: screenWidth * 0.07,
               top: screenHeight * 0.81,
@@ -91,11 +102,9 @@ class Splash extends StatelessWidget {
                 height: 62,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor:
-                        const Color(0xFF97BE5A), // Updated to backgroundColor
+                    backgroundColor: const Color(0xFF97BE5A),
                     shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(10), // Rounded corners
+                      borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                   onPressed: () {
@@ -108,11 +117,11 @@ class Splash extends StatelessWidget {
                     'Get Started',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Color(0xFFFEFAE0), // Text color
-                      fontSize: 18, // Font size
-                      fontFamily: 'Poppins', // Font family
-                      fontWeight: FontWeight.w600, // Font weight
-                      letterSpacing: 1.08, // Letter spacing
+                      color: Color(0xFFFEFAE0),
+                      fontSize: 18,
+                      fontFamily: 'Poppins',
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1.08,
                     ),
                   ),
                 ),

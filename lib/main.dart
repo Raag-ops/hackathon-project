@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'splash_screen.dart'; 
+import 'package:firebase_core/firebase_core.dart';
+import 'splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(); // Initialize Firebase before runApp
   runApp(const MyApp());
 }
 
@@ -17,19 +20,20 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green, // You can change the theme color
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Splash(), // Initial screen (Splash Screen)
+      home: const Splash(), // Initial screen (Splash Screen)
     );
   }
 }
+
 class Login extends StatelessWidget {
   const Login({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login screen"),
+        title: const Text("Login screen"),
       ),
-      body: Center(
+      body: const Center(
         child: Text("Welcome to Login screen"),
       ),
     );
